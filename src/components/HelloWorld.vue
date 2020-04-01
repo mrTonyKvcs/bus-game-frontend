@@ -1,7 +1,7 @@
 <template>
-  <div class="hello bg-primary">
+  <div class="hello">
     <h1>{{ msg }}</h1>
-    <div class="max-w-sm rounded overflow-hidden shadow-lg">
+    <div class="max-w-sm rounded overflow-hidden shadow-lg bg-primary">
         <div class="px-6 py-4">
             <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
             <p class="text-gray-700 text-base">
