@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '_mixins';
+
+body {
+    @apply bg-cyan text-lg;
+}
+
+.card {
+    @include m(red) {
+        //@apply text-cyan;
+        color: red;
+    }
+}
