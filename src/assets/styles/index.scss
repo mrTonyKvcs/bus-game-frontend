@@ -1,16 +1,50 @@
+@import '_mixins';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import '_mixins';
-
-body {
-    @apply bg-cyan text-lg;
+@import '@fortawesome/fontawesome-free';
+@import 'component/avatar';
+@import 'component/button';
+@import'component/card';
+@import 'component/icon';
+@import 'component/form';
+@import 'login';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&family=Poppins:wght@400;700;800;900&display=swap');
+html {
+    font-size: 62.5%;
+    height: 100%;
 }
 
-.card {
-    @include m(red) {
-        //@apply text-cyan;
-        color: red;
+body {
+    height: 100%;
+    font-family: Montserrat;
+}
+
+#app {
+    height: 100%;
+}
+
+.page {
+    @apply flex w-full h-full;
+    background: url('~@/assets/images/bg.png');
+}
+
+.row {
+    @apply mr-20;
+    width: 85%;
+}
+
+.title {
+    @apply text-2xl font-bold;
+}
+
+.description {
+    @apply text-tiny text-gray font-semibold;
+}
+
+.sidebar {
+    width: 15%;
+    a:hover {
+        @apply text-orange;
     }
 }

@@ -1,0 +1,22 @@
+.icons {
+    @apply flex;
+    &--sidebar {
+        @apply h-8 w-16 pr-6;
+    }
+    &--nav {
+        @apply w-6 ml-12;
+    }
+    &--status {
+        @apply w-8 h-8 absolute;
+        top: 1022px;
+        left: 446px;
+    }
+    &--send {
+        @apply h-6 w-6;
+    }
+}
+
+.icon {
+    @apply p-3 mr-6 h-20 w-20 rounded-max;
+    border: 2px solid #D9D9D9;
+}

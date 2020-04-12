@@ -1,0 +1,9 @@
+.btn {
+    @apply bg-rv h-16 w-64 text-white text-tiny font-normal py-2 px-4 outline-none rounded-max;
+    &--white {
+        @apply bg-white text-rv border border-solid border-darkmagenta;
+    }
+    &--white:hover {
+        @apply bg-rv text-white;
+    }
+}

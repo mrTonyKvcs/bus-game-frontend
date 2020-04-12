@@ -1,0 +1,19 @@
+.login {
+    @apply flex items-center justify-center h-full;
+    background: linear-gradient(180deg, #331577 0%, rgba(166, 49, 156, 0.63) 100%);
+}
+
+.login__welcome {
+    @apply text-white flex flex-col items-center bg-cover pt-32 px-40 rounded-max;
+    flex: 1;
+    background: url('~@/assets/images/bg.png');
+}
+
+.login__items {
+    flex: 2;
+}
+
+.login__input {
+    @apply flex flex-col justify-center items-center;
+    height: 90%;
+}

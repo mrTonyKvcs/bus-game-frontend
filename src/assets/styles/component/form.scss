@@ -1,0 +1,9 @@
+.form {
+    @include m(login) {
+        @apply flex flex-col items-center;
+        width: 45%;
+    }
+    &__input {
+        @apply block text-gray text-2xl font-normal outline-none border-b border-solid border-lightgray;
+    }
+}

@@ -1,0 +1,15 @@
+.avatar {
+    @apply rounded-full;
+    &--xs {
+        @apply h-10 w-10;
+    }
+    &--sm {
+        @apply h-20 w-20;
+    }
+    &--md {
+        @apply h-16 w-16;
+    }
+    &--xl {
+        @apply h-56 w-56;
+    }
+}

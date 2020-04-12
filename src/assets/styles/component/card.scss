@@ -1,0 +1,29 @@
+.card {
+    border-radius: 3rem;
+    width: 50rem;
+    height: 16rem;
+    background: url('~@/assets/images/card.png');
+    &--overview {
+        @apply ;
+    }
+}
+
+.card__login {
+    @apply flex bg-white w-full rounded-max;
+    margin: 12rem 16.5rem 12.2rem 16.3rem;
+    height: 75%;
+}
+
+.card__bg {
+    @apply h-auto w-full pt-20 px-20 rounded-max;
+    background: #E5E5E5;
+}
+
+.card__welcome {
+    @apply h-auto w-full flex shadow-md bg-white mb-24 rounded-max;
+}
+
+.card__chat {
+    @apply w-full p-10 bg-white flex flex-col rounded-max;
+    height: 70rem;
+}
