@@ -15,6 +15,7 @@ module.exports = {
         },
         textColor: {
             white: '#FFFFFF',
+            vlightgray: '#E8E8E8',
             lightgray: '#A0A4A8',
             gray: '#52575C',
             darkgray: '#828282',
@@ -24,23 +25,28 @@ module.exports = {
             orange: '#FFC755'
         },
         borderColor: {
+            white: '#ffff',
             lightgray: '#D3D8DD',
-            vlightgray: '#F1F1F1',
+            vlightgray: '#E8E8E8',
             darkmagenta: '#A6319C',
         },
         borderRadius: {
+            mid: '3rem',
             max: '5rem',
             full: '10rem',
         },
         backgroundColor: {
+            blue: '#007BDD',
             rv: '#A6319C',
+            lightgray: '#D3D8DD',
+            vlightgray: '#E8E8E8',
             white: '#ffff',
         },
         screens: {
             sm: '640px',
             md: '768px',
             lg: '1024px',
-            xl: '1280px',
+            xl: '2048px',
         },
         fontFamily: {
             display: ['Gilroy', 'sans-serif'],

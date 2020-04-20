@@ -20,7 +20,7 @@
           <form class="form--login" @submit.prevent="login">
             <input name="email" v-model="email" class="block pb-4 mb-16 w-full text-gray text-tiny font-normal  border-b border-solid border-lightgray outline-none"  type="text" placeholder="E-mail cím">
             <input name="password" v-model="password" class="block pb-4 w-full text-gray text-tiny font-normal  border-b border-solid border-lightgray outline-none"  type="text" placeholder="Jelszó">
-            <button type="submit" class="btn mt-24">Bejelenkezés </button>
+            <button type="submit" class="btn py-5 px-20 mt-24">Bejelenkezés </button>
           </form>
         </div>
       </div>

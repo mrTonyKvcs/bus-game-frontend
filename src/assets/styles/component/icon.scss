@@ -7,9 +7,7 @@
         @apply w-6 ml-12;
     }
     &--status {
-        @apply w-8 h-8 absolute;
-        top: 1022px;
-        left: 446px;
+        @apply w-6 h-6;
     }
     &--send {
         @apply h-6 w-6;

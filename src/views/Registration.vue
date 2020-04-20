@@ -24,8 +24,8 @@
                <input class="block pb-4 w-2/5 text-gray text-sm font-normal outline-none border-b border-solid border-lightgray "  type="text" placeholder="Keresztnév"> 
             </div>
             <input class="block mb-16 pb-4 w-full text-gray text-sm font-normal outline-none border-b border-solid border-lightgray"  type="text" placeholder="E-mail cím">
-            <input class="block mb-24 pb-4 w-full text-gray text-sm font-normal outline-none border-b border-solid border-lightgray"  type="text" placeholder="Jelszó">
-            <button class="btn">Bejelenkezés</button>
+            <input class="block  pb-4 w-full text-gray text-sm font-normal outline-none border-b border-solid border-lightgray"  type="text" placeholder="Jelszó">
+            <button class="btn btn py-5 px-20 mt-24">Regisztrálok</button>
           </form>
         </div>
       </div>

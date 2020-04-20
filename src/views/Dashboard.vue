@@ -9,7 +9,7 @@
                     <img class="icons--sidebar" src="~@/assets/images/index.svg" alt="">
                     <p>Áttekintés</p>
                 </a>
-                <a class="h-8 mb-24 flex items-center text-xl font-bold text-white" href="">
+                <a class="h-8 mb-24 flex items-center text-xl font-bold text-white" href="/game">
                     <img class="icons--sidebar" src="~@/assets/images/game.svg" alt="">
                     <p>Játék</p>
                 </a>
@@ -45,13 +45,13 @@
                         <h1 class="mb-10 text-4xl font-semibold">Hello {{ firstName }}!</h1>
                         <p class="mb-16 text-xl font-medium">Üdvözlünk a Buszos ivós játékban. Mielőtt elkezdenél játszani, keress és jelöld be barátaidat, hogy tudj kivel játékot kezdeményezni. Amennyiben már rendelkezel barátokkal, indíts új játékot!</p>
                         <div>
-                            <button class="btn mr-10">Játék indítása</button>
-                            <button class="btn btn--white">Barátok</button>
+                            <button class="btn h-16 w-64 mr-10">Játék indítása</button>
+                            <button class="btn h-16 w-64 btn--white">Barátok</button>
                         </div>
                     </div>
                 </div>
                 <div class="flex">
-                    <div class="w-3/4"> 
+                    <div class="w-4/6"> 
                         <div class="">
                             <h1 class="title">Játék</h1>
                             <h2 class="description pb-6">Utolsó játékaid statisztikái</h2>
@@ -77,7 +77,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card mr-10 py-8 px-10 flex flex-col justify-between text-white text-xs font-semibold">
+                                <div class="card py-8 px-10 flex flex-col justify-between text-white text-xs font-semibold">
                                     <div class="flex justify-between">
                                         <p>2020.02.21 // 20:34 - 22:54</p>
                                         <img class="avatar avatar--xs" src="~@/assets/images/profil.jpg" alt="">
@@ -104,9 +104,13 @@
                             <h1 class="title">Barátok</h1>
                             <h2 class="description">Akikkel utoljára játszottál és azok statisztikái</h2>
                             <div class="flex flex-col items-center w-56 mt-6">
-                                <img class="avatar avatar--xl" src="~@/assets/images/profil.jpg" alt="">
-                                <img class="icons--status" src="~@/assets/images/status.svg" alt="">
-                                <h1 class="mt-6 mb-2 text-sm font-bold">Kovács Attila</h1>
+                                <div>
+                                    <img class="avatar avatar--xl" src="~@/assets/images/profil.jpg" alt="">
+                                </div>
+                                <div class="mt-6 mb-2 flex items-center">
+                                    <h1 class="text-tiny font-bold">Kovács Attila</h1>
+                                    <img class="icons--status ml-4" src="~@/assets/images/status.svg" alt="">
+                                </div>
                                 <p class="text-sm font-medium">Buszra szállás: 6</p>
                                 <p class="text-sm font-medium">Játék: 12</p>
                             </div>
@@ -117,21 +121,23 @@
                             
                         </div>
                     </div>
-                    <div class="card__chat">
-                        <h1 class="text-2xl font-extrabold">Üzenőfal</h1>
-                        <div class="flex mt-8">
-                            <img class="avatar avatar--md" src="~@/assets/images/profil.jpg" alt="">
-                            <div class="w-full ml-6 px-6 flex items-center justify-between rounded-max border-2 border-solid border-vlightgray">
-                                <input class="w-full outline-none text-sm rounded-max" type="text" placeholder="Mi jár a fejedben?">
-                                <a href=""><img class="icons--send" src="~@/assets/images/send.svg" alt=""></a>
+                    <div class="w-2/6 flex justify-end">
+                        <div class="card__chat">
+                            <h1 class="text-2xl font-extrabold">Üzenőfal</h1>
+                            <div class="flex mt-8">
+                                <img class="avatar avatar--md" src="~@/assets/images/profil.jpg" alt="">
+                                <div class="w-full ml-6 px-6 flex items-center justify-between rounded-max border-2 border-solid border-vlightgray">
+                                    <input class="w-full outline-none text-sm rounded-max" type="text" placeholder="Mi jár a fejedben?">
+                                    <a href=""><img class="icons--send" src="~@/assets/images/send.svg" alt=""></a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="mt-12 flex">
-                            <img class="avatar avatar--md mr-6" src="~@/assets/images/profil.jpg" alt="">
-                            <div>
-                                <h2 class="text-tiny .font-medium">Savannah Miles</h2>
-                                <h3 class="text-sm text-lightgray">2020.04.11 - 22:45</h3>
-                                <p class="text-xl text-vdgray ">Lorem ipsum dolor sit amet, adhuc nulla definiebas mei ad, ei doming aperiam delicata est.</p>
+                            <div class="mt-12 flex overflow-scroll">
+                                <img class="avatar avatar--md mr-6" src="~@/assets/images/profil.jpg" alt="">
+                                <div>
+                                    <h2 class="text-tiny .font-medium">Savannah Miles</h2>
+                                    <h3 class="text-sm text-lightgray">2020.04.11 - 22:45</h3>
+                                    <p class="text-xl text-vdgray ">Lorem ipsum dolor sit amet, adhuc nulla definiebas mei ad, ei doming aperiam delicata est.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
