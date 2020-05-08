@@ -18,14 +18,14 @@
             <a href=""><img class="icon" src="~@/assets/images/twitter.svg" alt=""></a>
           </div>
           <p class="mb-16 text-xs text-darkgrey">vagy használd az e-mail címed a regisztrációhoz:</p>
-          <form class="form--login" action="">
+          <form @submit.prevent="registration" class="form--login" action="">
             <div class="w-full mb-16 flex justify-between">
-               <input class="block pb-4 w-2/5 text-gray text-sm font-normal outline-none border-b border-solid border-lightgray "  type="text" placeholder="Vezetéknév">
-               <input class="block pb-4 w-2/5 text-gray text-sm font-normal outline-none border-b border-solid border-lightgray "  type="text" placeholder="Keresztnév"> 
+               <input v-model="lastName" class="block pb-4 w-2/5 text-gray text-sm font-normal outline-none border-b border-solid border-lightgray "  type="text" placeholder="Vezetéknév" required>
+               <input v-model="firstName" class="block pb-4 w-2/5 text-gray text-sm font-normal outline-none border-b border-solid border-lightgray "  type="text" placeholder="Keresztnév" required> 
             </div>
-            <input class="block mb-16 pb-4 w-full text-gray text-sm font-normal outline-none border-b border-solid border-lightgray"  type="text" placeholder="E-mail cím">
-            <input class="block  pb-4 w-full text-gray text-sm font-normal outline-none border-b border-solid border-lightgray"  type="text" placeholder="Jelszó">
-            <button class="btn btn py-5 px-20 mt-24">Regisztrálok</button>
+            <input v-model="email" class="block mb-16 pb-4 w-full text-gray text-sm font-normal outline-none border-b border-solid border-lightgray"  type="email" placeholder="E-mail cím" required>
+            <input v-model="password" class="block  pb-4 w-full text-gray text-sm font-normal outline-none border-b border-solid border-lightgray"  type="password" placeholder="Jelszó" required>
+            <button type="submit" class="btn btn py-5 px-20 mt-24">Regisztrálok</button>
           </form>
         </div>
       </div>
@@ -37,20 +37,24 @@
 export default {
   data () {
     return {
+      firstName: '',
+      lastName: '',
       email: '',
       password: ''
     }
   },
 
   methods: {
-    login () {
+    registration () {
       this.$store
-        .dispatch('login', {
+        .dispatch('registration', {
+          first_name: this.firstName,
+          last_name: this.lastName,
           email: this.email,
           password: this.password
         })
         .then(() => {
-          this.$router.push({ name: 'Dashboard' })
+          this.$router.push({ name: 'Login' })
         })
         .catch(err => {
           console.log(err)

@@ -4,10 +4,13 @@
         @apply h-8 w-16 pr-6;
     }
     &--nav {
-        @apply w-6 ml-12;
+        @apply w-8 ml-12;
     }
     &--status {
         @apply w-6 h-6;
+    }
+    &--notification {
+        @apply w-4;
     }
     &--send {
         @apply h-6 w-6;

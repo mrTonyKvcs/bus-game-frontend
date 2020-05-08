@@ -18,8 +18,8 @@
             <a href=""><img class="icon" src="~@/assets/images/twitter.svg" alt=""></a>
           </div>
           <form class="form--login" @submit.prevent="login">
-            <input name="email" v-model="email" class="block pb-4 mb-16 w-full text-gray text-tiny font-normal  border-b border-solid border-lightgray outline-none"  type="text" placeholder="E-mail cím">
-            <input name="password" v-model="password" class="block pb-4 w-full text-gray text-tiny font-normal  border-b border-solid border-lightgray outline-none"  type="text" placeholder="Jelszó">
+            <input name="email" v-model="email" class="block pb-4 mb-16 w-full text-gray text-tiny font-normal  border-b border-solid border-lightgray outline-none"  type="email" placeholder="E-mail cím" required>
+            <input name="password" v-model="password" class="block pb-4 w-full text-gray text-tiny font-normal  border-b border-solid border-lightgray outline-none"  type="password" placeholder="Jelszó" required>
             <button type="submit" class="btn py-5 px-20 mt-24">Bejelenkezés </button>
           </form>
         </div>

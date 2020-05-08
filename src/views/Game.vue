@@ -1,40 +1,13 @@
 <template>
     <div class="page">
-        <div class="sidebar">
-            <div class="h-64 mb-48 flex justify-center items-center ">
-                <img src="~@/assets/images/logo.png" alt="">
-            </div>
-            <ul class="ml-20 flex flex-col">
-                <a class="h-8 mb-24 flex items-center text-xl font-bold text-white" href="/Dashboard">
-                    <img class="icons--sidebar" src="~@/assets/images/index.svg" alt="">
-                    <p>Áttekintés</p>
-                </a>
-                <a class="h-8 mb-24 flex items-center text-xl font-bold text-white" href="">
-                    <img class="icons--sidebar" src="~@/assets/images/game.svg" alt="">
-                    <p>Játék</p>
-                </a>
-                <a class="h-8  mb-24 flex items-center text-xl font-bold text-white " href="">
-                    <img class="icons--sidebar" src="~@/assets/images/friend.svg" alt="">
-                    <p>Barátok</p>
-                </a>
-                <a class="h-8 mb-24 flex items-center text-xl font-bold text-white" href="">
-                    <img class="icons--sidebar" src="~@/assets/images/user.svg" alt="">
-                    <p>Profil</p>
-                </a>
-            </ul>
-        </div>
+        <SideBar></SideBar>
         <div class="row">
             <div class="mt-24 mr-20 mb-10 ml-16 flex justify-between text-white">
                 <div class="text-3xl font-extrabold">
                     <h1>Játék</h1>
                     <p class="text-xl font-semibold leading-9">Hívd be ismerőseid és indíts játékot</p>
                 </div>
-                <div class="w-1/5 flex items-center ">
-                    <a href=""><img class="avatar avatar--sm" v-bind:src="profilePicture" alt=""></a>
-                    <a class="h-20 ml-4 pr-8 flex items-center text-sm font-bold border-r border-solid border-white" href=""><h2>{{ username }}</h2></a>
-                    <a class="icons--nav" href=""><img class="" src="~@/assets/images/bell.svg" alt=""></a>
-                    <a class="icons--nav" href="/login"><img class="" src="~@/assets/images/logout.svg" alt=""></a>
-                </div>
+                <NavBar></NavBar>
             </div>
             <div class="card__bg">
                 <h1 class="p-2 text-tiny text-gray font-semibold">Új játék létrehozása</h1>
@@ -126,7 +99,15 @@
 </template>
 
 <script>
+import SideBar from '@/components/SideBar.vue'
+import NavBar from '@/components/NavBar.vue'
+
 export default {
+    components: {
+        SideBar,
+        NavBar
+    },
+
     created () {
         console.log(this.firstName)
     },

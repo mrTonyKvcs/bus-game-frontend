@@ -1,6 +1,7 @@
 module.exports = {
     theme: {
         fontSize: {
+            xxs: '1rem',
             xs: '1.2rem',
             sm: '1.3rem',
             tiny: '1.4rem',
@@ -40,6 +41,8 @@ module.exports = {
             rv: '#A6319C',
             lightgray: '#D3D8DD',
             vlightgray: '#E8E8E8',
+            yellow: '#FFFF99',
+            red: '#FF0000',
             white: '#ffff',
         },
         screens: {

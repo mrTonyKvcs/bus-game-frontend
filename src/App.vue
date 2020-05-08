@@ -1,13 +1,13 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/dashboard" v-if="isLogged">Dashboard</router-link>
       <router-link to="/login" v-else>Login</router-link>
       <button type="button" @click="logout()" v-if="isLogged">
         Logout
       </button>
-    </div>
+    </div> -->
     <router-view/>
   </div>
 </template>

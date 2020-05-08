@@ -1,40 +1,13 @@
 <template>
     <div class="page">
-        <div class="sidebar">
-            <div class="h-64 mb-48 flex justify-center items-center ">
-                <img src="~@/assets/images/logo.png" alt="">
-            </div>
-            <ul class="ml-20 flex flex-col">
-                <a class="h-8 mb-24 flex items-center text-xl font-bold text-white" href="">
-                    <img class="icons--sidebar" src="~@/assets/images/index.svg" alt="">
-                    <p>Áttekintés</p>
-                </a>
-                <a class="h-8 mb-24 flex items-center text-xl font-bold text-white" href="/game">
-                    <img class="icons--sidebar" src="~@/assets/images/game.svg" alt="">
-                    <p>Játék</p>
-                </a>
-                <a class="h-8  mb-24 flex items-center text-xl font-bold text-white " href="">
-                    <img class="icons--sidebar" src="~@/assets/images/friend.svg" alt="">
-                    <p>Barátok</p>
-                </a>
-                <a class="h-8 mb-24 flex items-center text-xl font-bold text-white" href="">
-                    <img class="icons--sidebar" src="~@/assets/images/user.svg" alt="">
-                    <p>Profil</p>
-                </a>
-            </ul>
-        </div>
+        <SideBar></SideBar>
         <div class="row">
             <div class="mt-24 mr-20 mb-10 ml-16 flex justify-between text-white">
                 <div class="text-3xl font-extrabold">
                     <h1>Áttekintés</h1>
                     <p class="text-xl font-semibold leading-9">Indíts játékot, kezeld ismerőseid, csatlakozz másokhoz! </p>
                 </div>
-                <div class="w-1/5 flex items-center ">
-                    <a href=""><img class="avatar avatar--sm" :src="profilePicture" alt=""></a>
-                    <a class="h-20 ml-4 pr-8 flex items-center text-sm font-bold border-r border-solid border-white" href=""><h2>{{ username }}</h2></a>
-                    <a class="icons--nav" href=""><img class="" src="~@/assets/images/bell.svg" alt=""></a>
-                    <a class="icons--nav" href="/login"><img class="" src="~@/assets/images/logout.svg" alt=""></a>
-                </div>
+                <NavBar></NavBar>
             </div>
             <div class="card__bg">
                 <div class="card__welcome">
@@ -42,7 +15,7 @@
                         <img class="rounded-l-max" src="~@/assets/images/index-card.jpg" alt="">
                     </div>
                     <div class="w-1/2 ml-20 flex flex-col justify-center ">
-                        <h1 class="mb-10 text-4xl font-semibold">Hello {{ firstName }}!</h1>
+                        <h1 class="mb-10 text-4xl font-semibold">Hello {{ user.user.first_name }}!</h1>
                         <p class="mb-16 text-xl font-medium">Üdvözlünk a Buszos ivós játékban. Mielőtt elkezdenél játszani, keress és jelöld be barátaidat, hogy tudj kivel játékot kezdeményezni. Amennyiben már rendelkezel barátokkal, indíts új játékot!</p>
                         <div>
                             <button class="btn h-16 w-64 mr-10">Játék indítása</button>
@@ -148,22 +121,16 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
+import SideBar from '@/components/SideBar.vue'
+import NavBar from '@/components/NavBar.vue'
+
 export default {
-    created () {
-        console.log(this.firstName)
+    components: {
+        SideBar,
+        NavBar
     },
-    computed: {
-        username() {
-            return this.$store.state.user.user.name
-        },
-        firstName() {
-            let name = this.username.split(" ")
-            return name[0]
-        },
-        profilePicture() {
-            const id = this.$store.state.user.user.id 
-            return `/images/${id}.jpg`
-        }
-    }
+
+    computed: mapState(['user'])
 }
 </script>
