@@ -27,10 +27,10 @@
                             <div>
                                 <div class="flex justify-between">
                                     <h1 class="title">Feles kör</h1>
-                                    <input class="game__checkbox" type="checkbox" value="0">
+                                    <input @click="switchValue()" class="game__checkbox" type="checkbox" value="0">
                                 </div>
-                                <p class="description">Állítsd be milyen gyakran igyon minden játékos egy felest!</p>
-                                <div class="pt-10 pb-24 flex justify-between">
+                                <p v-if="true" class="description">Állítsd be milyen gyakran igyon minden játékos egy felest!</p>
+                                <div v-if="true" class="pt-10 pb-24 flex justify-between">
                                     <button class="btn btn--gray ">Random</button>
                                     <button class="btn btn--gray ">5 perc</button>
                                     <button class="btn btn--gray ">10 perc</button>
@@ -108,21 +108,11 @@ export default {
         NavBar
     },
 
-    created () {
-        console.log(this.firstName)
-    },
-    computed: {
-        username() {
-            return this.$store.state.user.user.name
-        },
-        firstName() {
-            let name = this.username.split(" ")
-            return name[0]
-        },
-        profilePicture() {
-            const id = this.$store.state.user.user.id 
-            return `/images/${id}.jpg`
+    data() {
+        return {
+            switcher: false
         }
-    }
+    },
+
 }
 </script>

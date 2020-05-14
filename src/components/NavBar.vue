@@ -13,7 +13,7 @@
                 <Notification v-for="notification in notifications" :key="notification.id" :notification="notification"></Notification>
             </div>
         </div>
-        <a class="icons--nav" href="/login"><img class="" src="~@/assets/images/logout.svg" alt=""></a>
+        <router-link to="/login" class="icons--nav"><a ><img class="" src="~@/assets/images/logout.svg" alt=""></a></router-link>
     </div>
 </template>
 

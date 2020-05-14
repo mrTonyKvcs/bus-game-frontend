@@ -9,13 +9,14 @@
             </div>
             <p class="text-sm font-medium">Buszra szállás: 6</p>
             <p class="pb-6 text-sm font-medium">Játék: 12</p>
-            <button v-if="user.status" @click="addFriend()" class="py-2 px-8 bg-blue text-white text-tiny font-semibold rounded-full">Jelölés</button>
-            <button v-if="!user.status" class="py-2 px-8 bg-yellow text-white text-tiny font-semibold rounded-full">Visszavonás</button>
+            <button  v-if="!changeButton" @click="addFriend()" class="py-2 px-8 bg-blue text-white text-tiny font-semibold rounded-full">Jelölés</button>
+            <button  v-if="changeButton" class="py-2 px-8 bg-yellow text-white text-tiny font-semibold rounded-full">Visszavonás</button>
         </div>
     </div>
 </template>
 
 <script>
+
 export default {
     props: ['user'],
 
@@ -23,6 +24,17 @@ export default {
         addFriend() {
             this.$store.dispatch('addFriend', this.user.id)
         }
+    },
+
+    computed: {
+        changeButton(){
+            return this.user.friendships.forEach(friendship => {
+                if(friendship.status === 0){
+                    return true
+                }
+            }) 
+        }
     }
+
 }
 </script>

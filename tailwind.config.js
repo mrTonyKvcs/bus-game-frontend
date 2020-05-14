@@ -13,6 +13,7 @@ module.exports = {
             '4xl': '4.4rem',
             '5xl': '5rem',
             '6xl': '6rem',
+            '7xl': '7rem'
         },
         textColor: {
             white: '#FFFFFF',

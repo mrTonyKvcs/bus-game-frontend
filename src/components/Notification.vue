@@ -1,5 +1,5 @@
 <template>
-        <div class="flex justify-between mt-16 border-b-2 border-lightgray">
+        <div class="flex justify-between mt-16 border-b-2 border-lightgray overflow-scroll">
             <div class="flex ">
                 <img class="avatar avatar--sm mr-5" alt="" src="~@/assets/images/profil.jpg">
                 <div class="flex flex-col pt-2">

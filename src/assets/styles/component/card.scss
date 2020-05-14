@@ -8,6 +8,10 @@
     }
 }
 
+.card--stat {
+    background: url('~@/assets/images/bg.jpg');
+}
+
 .card__login {
     @apply flex bg-white w-full rounded-max;
     margin: 12rem 16.5rem 12.2rem 16.3rem;
@@ -15,7 +19,7 @@
 }
 
 .card__bg {
-    @apply h-auto w-full pt-20 px-20 rounded-max;
+    @apply h-auto w-full p-20 rounded-max;
     background: #E5E5E5;
 }
 

@@ -10,8 +10,10 @@ axios.defaults.baseURL = 'http://127.0.0.1:8000/api'
 export default new Vuex.Store({
     state: {
         user: null,
-        allUser: [],
-        notifications: []
+        users: [],
+        notifications: [],
+        friends: [],
+        status: false
     },
 
     mutations: {
@@ -26,27 +28,18 @@ export default new Vuex.Store({
             location.reload()
         },
 
-        setUsers(state, alluser) {
-            alluser.forEach(user => {
-                state.allUser.push({
-                    first_name: user.first_name,
-                    last_name: user.last_name,
-                    id: user.id,
-                    status: true
-                })
-            })
-        },
-
-        changeButton(state, id) {
-            const findID = state.allUser.find(user => user.id === id)
-            if (findID) {
-                findID.status = false
-            }
+        setUsers(state, users) {
+            state.users = users
         },
 
         allNotifications(state, notifications) {
             state.notifications = notifications
-        }
+        },
+
+        allFriends(state, friends) {
+            state.friends = friends
+        },
+
     },
 
 
@@ -78,14 +71,9 @@ export default new Vuex.Store({
 
         },
 
-        addFriend({ state, commit }, userID) {
+        addFriend({ state }, userID) {
             axios
                 .post(`add-friend/${state.user.user.id}/${userID}`)
-                .then(() => {
-                    commit('changeButton', userID)
-                })
-
-
         },
 
         fetchNotifications({ state, commit }) {
@@ -104,8 +92,14 @@ export default new Vuex.Store({
         deny({ state }, senderId) {
             axios
                 .post(`deny-friend-request/${state.user.user.id}/${senderId}`)
+
+        },
+
+        fetchFriends({ state, commit }) {
+            axios
+                .get(`notifications/${state.user.user.id}`)
                 .then(({ data }) => {
-                    console.log(data)
+                    commit('allFriends', data.friends)
                 })
         },
 

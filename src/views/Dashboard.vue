@@ -18,8 +18,8 @@
                         <h1 class="mb-10 text-4xl font-semibold">Hello {{ user.user.first_name }}!</h1>
                         <p class="mb-16 text-xl font-medium">Üdvözlünk a Buszos ivós játékban. Mielőtt elkezdenél játszani, keress és jelöld be barátaidat, hogy tudj kivel játékot kezdeményezni. Amennyiben már rendelkezel barátokkal, indíts új játékot!</p>
                         <div>
-                            <button class="btn h-16 w-64 mr-10">Játék indítása</button>
-                            <button class="btn h-16 w-64 btn--white">Barátok</button>
+                            <router-link to="/game"><button class="btn h-16 w-64 mr-10 focus:outline-none"> játék indítása</button></router-link>
+                            <router-link to="/friends"><button  class="btn h-16 w-64 btn--white focus:outline-none">Barátok</button></router-link>
                         </div>
                     </div>
                 </div>
@@ -76,22 +76,9 @@
                         <div class="mt-24">
                             <h1 class="title">Barátok</h1>
                             <h2 class="description">Akikkel utoljára játszottál és azok statisztikái</h2>
-                            <div class="flex flex-col items-center w-56 mt-6">
-                                <div>
-                                    <img class="avatar avatar--xl" src="~@/assets/images/profil.jpg" alt="">
-                                </div>
-                                <div class="mt-6 mb-2 flex items-center">
-                                    <h1 class="text-tiny font-bold">Kovács Attila</h1>
-                                    <img class="icons--status ml-4" src="~@/assets/images/status.svg" alt="">
-                                </div>
-                                <p class="text-sm font-medium">Buszra szállás: 6</p>
-                                <p class="text-sm font-medium">Játék: 12</p>
+                            <div class="flex">
+                                <Friends v-for="friend in friends" :key="friend.id" :friend="friend"></Friends>
                             </div>
-                        </div>
-                        <div class="mt-24">
-                            <h1 class="title">Meghívó küldése</h1>
-                            <h2 class="description">Küldj meghívót barátaidnak e-mailben és játszatok együtt a játékot! </h2>
-                            
                         </div>
                     </div>
                     <div class="w-2/6 flex justify-end">
@@ -124,13 +111,19 @@
 import {mapState} from 'vuex'
 import SideBar from '@/components/SideBar.vue'
 import NavBar from '@/components/NavBar.vue'
+import Friends from '@/components/Friends.vue'
 
 export default {
     components: {
         SideBar,
-        NavBar
+        NavBar,
+        Friends
     },
 
-    computed: mapState(['user'])
+    computed: mapState(['user', 'friends']),
+
+    created() {
+        this.$store.dispatch('fetchFriends')
+    },
 }
 </script>
