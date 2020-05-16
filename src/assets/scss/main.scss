@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+// Base
+@import 'base/html';
+// Components
+@import 'components/header';
+@import 'components/sidebar';
+@import 'components/wrapper';
