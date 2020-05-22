@@ -1,0 +1,12 @@
+.dashboard {
+    @apply h-index-mobile-sm;
+    background-image: url('~@/assets/images/13494sm.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    @media (min-width: 730px) {
+        @apply h-screen pt-24;
+        background-image: url('~@/assets/images/13494.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}

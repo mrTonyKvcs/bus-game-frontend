@@ -7,7 +7,7 @@ module.exports = {
     theme: {
         screens: {
             "sm": "576px",
-            "md": "768px",
+            "md": "732px",
             "lg": "992px",
             "xl": "1200px",
             "xxl": "1800px",
@@ -105,7 +105,7 @@ module.exports = {
                 600: '#805ad5',
                 700: '#6b46c1',
                 800: '#553c9a',
-                900: '#44337a',
+                900: '#2d0d6b',
             },
             pink: {
                 100: '#fff5f7',
@@ -140,7 +140,8 @@ module.exports = {
             '56': '14rem',
             '64': '16rem',
             'header': '19rem',
-            'sidebar': '30rem'
+            'sidebar': '30rem',
+            'index-mobile-sm': '73.3rem'
         },
         backgroundColor: theme => theme('colors'),
         backgroundOpacity: theme => theme('opacity'),
@@ -172,6 +173,7 @@ module.exports = {
             md: '0.375rem',
             lg: '0.5rem',
             full: '9999px',
+            max: '100px',
         },
         borderWidth: {
             default: '1px',

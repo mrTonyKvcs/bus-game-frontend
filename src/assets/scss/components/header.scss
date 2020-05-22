@@ -1,3 +1,5 @@
 .header {
-    @apply absolute w-full top-0 left-0;
+    @media (min-width: 1280px) {
+        @apply absolute w-full top-0 left-0;
+    }
 }

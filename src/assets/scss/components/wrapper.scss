@@ -1,3 +1,5 @@
 .wrapper {
-    @apply pl-sidebar pt-header;
+    @media (min-width: 1280px) {
+        @apply pl-sidebar pt-header;
+    }
 }
