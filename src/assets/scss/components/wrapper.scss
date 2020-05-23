@@ -1,5 +1,7 @@
 .wrapper {
     @media (min-width: 1280px) {
-        @apply pl-sidebar pt-header;
+        @apply bg-purple-900 pl-sidebar pr-20 pt-header;
+        //background-image: url('~@/assets/images/bg.png');
+        background-size: cover;
     }
 }

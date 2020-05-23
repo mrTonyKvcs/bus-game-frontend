@@ -2,4 +2,7 @@ html {
     @apply h-screen;
     font-size: 62.5%;
     font-family: 'Montserrat', sans-serif;
+    @media (min-width: 1200px) {
+        @apply bg-purple-900
+    }
 }

@@ -6,7 +6,7 @@ module.exports = {
     separator: ':',
     theme: {
         screens: {
-            "sm": "576px",
+            "sm": "410px",
             "md": "732px",
             "lg": "992px",
             "xl": "1200px",
@@ -21,6 +21,7 @@ module.exports = {
 
             black: '#000000',
             white: '#fff',
+            dwhite: '#E5E5E5',
             redviolet: '#A6319C',
 
 
@@ -134,13 +135,15 @@ module.exports = {
             '16': '4rem',
             '20': '5rem',
             '24': '6rem',
+            '28': '7rem',
             '32': '8rem',
             '40': '10rem',
             '48': '12rem',
             '56': '14rem',
             '64': '16rem',
-            'header': '19rem',
+            'header': '16.7rem',
             'sidebar': '30rem',
+            'welcomecard': '33.6rem',
             'index-mobile-sm': '73.3rem'
         },
         backgroundColor: theme => theme('colors'),
@@ -172,6 +175,7 @@ module.exports = {
             default: '0.25rem',
             md: '0.375rem',
             lg: '0.5rem',
+            xl: '5rem',
             full: '9999px',
             max: '100px',
         },
